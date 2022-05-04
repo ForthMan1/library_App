@@ -79,7 +79,7 @@ public class HelloController {
     }
 
     private static void LoginUser(String loginText, String loginPassword) {
-
+        System.out.println("Author logined");
     }
 
     private static void Register(String login, String password) {
