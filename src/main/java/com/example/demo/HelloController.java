@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -54,14 +56,6 @@ public class HelloController {
                 stage.show();
         });
 
-        ClientSignInButton.setOnAction(actionEvent -> {
-            String login_text =ClientSignInButton.getText().trim(); // trim -удаляет лишние пробелы
-            String login_pass = ClientSignInButton.getText().trim();
-            if(!login_text.equals("") && !login_pass.equals(""))
-                LoginUser(login_text,login_pass);
-            else System.out.println("Запишите логин и пароль");
-        });
-
         ClientSignInButton.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
             ClientSignInButton.getScene().getWindow().hide(); // нужно чтобы при открытии нового окна это окно скрывалась
             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -79,9 +73,18 @@ public class HelloController {
             stage.setResizable(false);
             stage.show();
         });
+
+
+
     }
 
     private void LoginUser(String loginText, String loginPassword) {
+
+    private static void LoginUser(String loginText, String loginPassword) {
+
+    }
+
+    private static void Register(String login, String password) {
 
     }
 }
